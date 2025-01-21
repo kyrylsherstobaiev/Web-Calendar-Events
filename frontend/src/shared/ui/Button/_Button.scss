@@ -1,0 +1,62 @@
+:root {
+  --bg-color-button: #3ca270;
+  --bg-color-button-hover: #1f8657;
+  --bg-color-button-active: #2f885c;
+  --padding-button: 0.3rem 0.75rem;
+}
+
+.container-button {
+  .button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-family: inherit;
+    border-radius: 5px;
+    padding: var(--padding-button);
+    border: 1px solid lightgrey;
+    background-color: var(--bg-color-button);
+    color: white;
+    text-decoration: none;
+    gap: 0.1rem;
+    font-weight: 500;
+
+    &:hover {
+      background-color: var(--bg-color-button-hover);
+      cursor: pointer;
+    }
+
+    &:active {
+      background-color: var(--bg-color-button-active);
+    }
+
+    &:disabled {
+      filter: invert(20%);
+      pointer-events: none;
+    }
+  }
+
+  & .isDisabled {
+    filter: invert(20%);
+    text-decoration: none;
+    pointer-events: none;
+    background-color: #335ad9;
+  }
+  .btn-save {
+  }
+  .btn-cancel {
+    --bg-color-button: #3e75ef;
+    --bg-color-button-hover: #195aef;
+  }
+  .btn-delete {
+    --bg-color-button: #cc4848;
+    --bg-color-button-hover: #b92f2f;
+  }
+  .btn-today {
+    --padding-button: 0.1rem 0.55rem;
+    font-size: 0.8rem;
+  }
+  .btn-clear {
+    --bg-color-button: #918f8f;
+    --bg-color-button-hover: #7a7777;
+  }
+}

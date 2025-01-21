@@ -1,0 +1,140 @@
+.container-calendar {
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  padding: 0.5rem;
+  border-radius: 5px;
+  font-family: cursive;
+  font-size: 0.7rem;
+  background-color: #fff;
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 0.5rem;
+    font-weight: 700;
+    color: #2b932e;
+
+    .year {
+      position: relative;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      .list-years {
+        position: absolute;
+        height: 200px;
+        overflow-y: scroll;
+        top: 25px;
+        background-color: #fff;
+        //display: block;
+        scrollbar-width: thin;
+        padding: 0 0 0 0;
+        border-top: 1px solid lightgrey;
+        color: #8a8383;
+
+        div {
+          padding: 0.1rem 0.1rem 0.1rem 0;
+
+          &:hover {
+            background-color: #1ba41e;
+            color: white;
+            border-radius: 5px;
+          }
+        }
+      }
+    }
+
+    .month {
+      display: flex;
+      gap: 1rem;
+
+      .month-show {
+        width: 40px;
+        text-align: center;
+      }
+
+      .left,
+      .right {
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+    .todayBtn {
+      border-radius: 0.2rem;
+      font-size: 0.6rem;
+      padding: 0.05rem 0.2rem;
+      color: white;
+      background-color: #3ca270;
+      font-weight: 400;
+      cursor: pointer;
+      letter-spacing: 0.02rem;
+    }
+  }
+
+  .days-of-week {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    justify-items: center;
+    padding: 0.25rem 0;
+    font-weight: 700;
+    border-bottom: 1px solid #cecccc;
+    border-top: 1px solid #cecccc;
+    color: #807e7e;
+    font-size: 0.6rem;
+  }
+
+  .days-number {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    padding: 0.8rem 0;
+    font-size: 0.6rem;
+    font-weight: 700;
+
+    div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0.3rem 0.4rem;
+      border-radius: 50%;
+      transition: 0.1s;
+    }
+
+    div:hover {
+      background-color: #1ba41e;
+
+      color: whitesmoke;
+      cursor: pointer;
+    }
+  }
+
+  .picked-date {
+    padding: 0.2rem 0.7rem;
+    border: 1px solid #cecccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #2b932e;
+    border-radius: 5px;
+    font-size: 0.6rem;
+  }
+
+  .pointer {
+    pointer-events: none;
+  }
+
+  .show-year-list {
+    display: none;
+  }
+
+  .today {
+    background-color: rgba(122, 151, 246, 0.5);
+  }
+
+  .picked-day-calendar {
+    color: white;
+    background-color: #144aea;
+  }
+}

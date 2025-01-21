@@ -1,0 +1,62 @@
+.custom-label {
+  display: inline-block;
+  font-size: 0.9rem;
+  font-weight: 700;
+  position: relative;
+  width: 100%;
+  //font-family: inherit;
+
+  .input-class {
+    display: block;
+    border: none;
+    border-bottom: 1.5px solid #565555;
+    color: #333232;
+    padding: 0.2rem 0;
+    outline: none;
+    width: 100%;
+
+    &::placeholder {
+      font-size: 0.9rem;
+      color: #8a8989;
+    }
+
+    &:focus {
+      border-color: #2c2b2b;
+    }
+
+    &:disabled {
+      border-color: #b9b7b7;
+      background-color: white;
+
+      &::placeholder {
+        color: #cecbcb;
+      }
+    }
+  }
+
+  .isErrorInput {
+    border-color: #f44336;
+  }
+
+  button {
+    padding: 0;
+    position: absolute;
+    top: 14%;
+    right: 3px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  .isDisabledInput {
+    pointer-events: none;
+    color: #b9b7b7;
+  }
+
+  .error {
+    color: #f44336;
+    height: 1rem;
+    font-weight: 500;
+    font-size: 0.8rem;
+    //margin-bottom: 1rem;
+  }
+}
